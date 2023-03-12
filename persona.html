@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+      }
+      .one {
+        background-color: #123456;
+        width: 100%;
+        height: auto;
+        /* margin:20px 0; */
+        padding: 20px;
+        position: relative;
+      
+         
+      }
+      .nav {
+        background-color: #fff;
+        width: 98%;
+        /* height: 50pxpx; */
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        /* padding: 10px; */
+        /* position: absolute; */
+        border-radius: 15px;
+        position: sticky;
+        z-index: 999;
+        top: 0;
+      }
+      .list {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: 10px;
+      }
+      .li {
+        text-decoration: none;
+      }
+      .nave {
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-grow: 1;
+        flex-wrap: wrap;
+        /* overflow: auto; */
+      }
+      .para {
+        position: relative;
+        padding: 100px;
+      }
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 100px;
+        flex-wrap: wrap;
+        /* overflow: hidden; */
+      }
+      .content {
+        font-family: sans-serif;
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: 100;
+      }
+      .btn {
+        line-height: 50px;
+        width: 150px;
+        height: 50px;
+        border-radius: 25px;
+        background-color: #ff6565;
+        font-weight: 200;
+        font-family: sans-serif;
+        font-style: bold;
+      }
+      .build {
+        text-align: center;
+      }
+      .vit-sub {
+        width: 400px;
+        height: 400px;
+        /* border: 1px solid black; */
+        padding: 0px;
+        margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+        float: right;
+        background-color: #ffffff;
+      }
+      .vit-block {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        /* justify-items: center; */
+        /* align-self: center; */
+        width: auto;
+        height: auto;
+        /* border: 1px solid black; */
+        margin: 20px 250px 50px 250px;
+        padding:40px ;
+
+        /* overflow: scroll; */
+      }
+      .btn-2 {
+        text-align: center;
+
+        border: 2px solid red;
+        width: 190px;
+        height: auto;
+        padding: 1%;
+        margin-left: 44%;
+        border-radius: 20px;
+       
+      }
+      .shop {
+        text-align: center;
+        text-decoration: none;
+        color: #f93c3c;
+        font-family: sans-serif;
+        font-weight: 300;
+        clear: both;
+      }
+      .btn-2:hover {
+        background-color: #e7b4b4;
+        color: black;
+       
+      }
+      .shop:hover {
+        color: black;
+      }
+      .next-shop {
+        display: flex;
+
+        flex-wrap: wrap;
+        justify-content: space-around;
+        position: relative;
+      }
+      .img-why {
+        border: 2px solid rgb(255, 255, 255);
+        width: 40%;
+      }
+      .why {
+        padding: 50px;
+        text-align: middle;
+      }
+      .doctor {
+        border: none;
+        width: 50%;
+        margin: auto;
+      }
+      .last {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        background-color: #fcf9f3;
+        /* position: absolute; */
+      }
+      .nutritionist {
+        margin: auto;
+      }
+      
+      .foot{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: #c0a8a8;
+        margin-top: 20px;
+        
+      }
+      .foot_element_1{
+          
+           margin: 20px 0;
+           display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      
+        /* align-items: center; */
+        
+        background-color: #c0a8a8;
+        flex-wrap: wrap;
+        width: auto;
+      }
+      .foot_element{
+        line-height: 30px;
+      }
+      li{
+        list-style-type: none;
+      }
+      a{
+        text-decoration: none;
+      }
+      img:hover .hover_img{
+        display: inline;
+      }
+      @media only  screen and (max-width:700px) {
+        .foot_element_2{
+          display: none;
+        }
+      }
+      .vit-sub-text{
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        justify-content: center;
+        background-color: #ffffff;
+      }
+      .btn_with_blocks{
+        background-color: #e0e7f4;
+      }
+      .tot1{
+        background-color: #e0e7f4;
+        width: auto;
+      }
+      .vit-sub:hover{
+         border:1px solid black;
+         transition: .2s;
+        
+      }
+      .inner_test{
+        display: flex;
+        /* margin: 20px 40px 20px 100px; */
+        margin-left: 10px;
+        justify-content: left;
+        justify-items: baseline;
+        align-items: center;
+        gap:10px
+      }
+      .testmonials{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin: 20px 20px 20px 20px;
+        padding: 0px 0px 0px 100px;
+
+      }
+      .tst_img{
+          max-width: 200px;
+          margin: 0 auto;
+          padding-top: 5px;
+      }
+      .test_1 {
+        width: 25%;
+        height: auto;
+        border: 1px solid rgb(255, 251, 251);
+        /* background-image: linear-gradient(
+          to bottom,
+          #f5e0c2 0%,
+          #f5e0c2 50%
+          white 50%,
+          white 100%
+        ); */
+        background-image:  linear-gradient( to bottom, #F5e0C2 0%,  #F5e0C2 25%, white 25%, white 50% );;
+        
+        margin-left: 20px;
+        margin-top: 20px;
+        border-radius: 10px;
+        box-shadow:  20px 20px 20px rgb(0, 0, 0,0.2);
+      }
+
+      
+    </style>
+  </head>
+  <body>
+    <div class="one">
+      <div class="nav">
+        <ul class="nave">
+          <li class="list">
+            <image src="Flag-of-india.png" height="50px" width="50px"></image>
+          </li>
+          <li class="list"><a href="#" class="li">Try This quiz</a></li>
+          <li class="list"><a href="#" class="li">Shop</a></li>
+          <li class="list"><a href="#" class="li">Why persona</a></li>
+          <li class="list"><a href="#" class="li">Explore</a></li>
+          <li class="list"><a href="#" class="li">Refer a friend</a></li>
+        </ul>
+      </div>
+      <div class="container">
+        <div class="para">
+          <h1 style="color: #fff; font-size: 4vw">
+            Personalized
+            <br />
+            For You
+          </h1>
+          <p class="content" style="color: #fff">
+            Tell us about your lifestyle & wellness goals.
+            <br />
+            We'll build you the perfect pack.
+          </p>
+          <br />
+          <form>
+            <input type="button" value="Take The Quiz" class="btn" />
+          </form>
+        </div>
+        <div class="hero_img">
+          <image
+            src="hands-hero-desktop-v2.webp"
+            height="500px"
+            width="500px"
+          ></image>
+        </div>
+      </div>
+    </div>
+  <div class="total">
+  
+    
+  <div class="tot1">
+    <div class="build">
+      <br />
+      <h2 style="color: rgb(0, 0, 0) ;background-color: #e0e7f4;">Build Your Pack</h2>
+
+      <p>Start with our expert recommendations</p>
+    </div>
+    <br />
+     <div class="btn-2" height="auto" width="100%">
+      <a href="#" class="shop"> SHOP THE VITAMINS</a>
+     </div>
+  
+    <div class="vit-block">
+      <div class="vit-sub">
+        <image
+          src="50008.webp"
+          alt="image of medicine"
+          width="400px"
+          height="300px"
+          style="position: absolute;"class="img"
+        ></image>
+        <image src="50002.webp" style="position: absolute;width:400px;height:300px;display: none; " class="hover_img"></image>
+        <br />
+        <h2>Resolution Blend</h2>
+        <p>Eases effects of everyday stress*</p>
+        <br />
+        <p>$70.28 / 28-day supply</p>
+      </div>
+      <div class="vit-sub">
+        <image
+          src="50008.webp"
+          alt="image of medicine"
+          width="400px"
+          height="300px"
+        ></image>
+        <br />
+        <div class="vit-sub-text">
+        <h2>Resolution Blend</h2>
+        <p>Eases effects of everyday stress*</p>
+        <br />
+        <p>$70.28 / 28-day supply</p>
+      </div>
+      </div>
+      <div class="vit-sub">
+        <image
+          src="50008.webp"
+          alt="image of medicine"
+          width="400px"
+          height="300px"
+        ></image>
+        <br />
+        <div class="vit-sub-text">
+        <h2>Resolution Blend</h2>
+        <p>Eases effects of everyday stress*</p>
+        <br />
+        <p>$70.28 / 28-day supply</p>
+        </div>
+      </div>
+      <div class="vit-sub">
+        <image
+          src="50008.webp"
+          alt="image of medicine"
+          width="400px"
+          height="300px"
+        ></image>
+        <br />
+        <div class="vit-sub-text">
+        <h2>Resolution Blend</h2>
+        <p>Eases effects of everyday stress*</p>
+        <br />
+        <p>$70.28 / 28-day supply</p>
+        </div>
+      </div>
+      <div class="vit-sub">
+        <image
+          src="50008.webp"
+          alt="image of medicine"
+          width="400px"
+          height="300px"
+        ></image>
+        <br />
+        <div class="vit-sub-text">
+        <h2>Resolution Blend</h2>
+        <p>Eases effects of everyday stress*</p>
+        <br />
+        <p>$70.28 / 28-day supply</p>
+        </div>
+      </div>
+      <div class="vit-sub">
+        <image
+          src="50008.webp"
+          alt="image of medicine"
+          width="400px"
+          height="300px"
+        ></image>
+        <!-- file:///C:/Users/SAI/Downloads/50008.webp -->
+        <br />
+        <div class="vit-sub-text">
+        <h2>Resolution Blend</h2>
+        <p>Eases effects of everyday stress*</p>
+        <br />
+        <p>$70.28 / 28-day supply</p>
+      </div>
+    </div>
+   
+
+    
+  </div>
+  <div class="btn-2" height="auto" width="100%" style="margin-top:10px;margin-bottom: 20px; ">
+    <a href="#" class="shop"> SHOP THE VITAMINS</a>
+   </div>
+   <br>
+   
+  </div>
+ 
+   
+    <br />
+    <div class="next-shop" width="100%" height="700px">
+      <div class="img-why" width="50%" height="300px">
+        <image src="WhyPersona-Table-Desktop.webp" width="110%"></image>
+      </div>
+      <div class="why">
+        <h2 class="y-persona">Why persona ?</h2>
+
+        <p>
+          You deserve the best. Sourced in nature, based in science, tailored to
+          you.<br />
+          No other supplements even come close.
+        </p>
+      </div>
+    </div>
+    <br />
+    <div class="last">
+      <div class="doctor">
+        <image src="Get-personal-with-a-nutritionist.webp"></image>
+      </div>
+      <div class="nutritionist">
+        <h1>Get personal with a nutritionist</h1>
+        <br />
+        <h4>PERSONA IS ABOUT MORE THAN VITAMINS.</h4>
+        <br />
+        <p>
+          Our subscribers get unlimited access to a team of qualified
+          nutritionists. They’ll work <br />with you one-on-one to take your
+          nutrition to the next level.<br />
+          It’s personal, it’s powerful, and it’s absolutely free.
+        </p>
+      </div>
+    </div>
+    <br />
+    <div style="text-align: center; margin-top: 30px">
+      <h1>Trusted by customers.</h1>
+      <h2 style="color: rgb(133, 115, 93)">
+        Backed by science. Loved by nutritionists.
+      </h2>
+      <br />
+    </div>
+    <div class="testmonials">
+      <div class="test_1" style="">
+        <div class="tst_img" >
+        <img src="stephen's-personalized-pack (1).webp" class="tst_img">
+       </div>
+        <div style="text-align: center">
+          <h2>Stephen’s Personalised Pack</h2>
+          <h4>@scbryant7</h4>
+        </div>
+        <hr>
+        <div class="inner_test">
+          
+          <img src="digestive-enzymes.svg">
+          <div style="display: block;text-align: center;"><h3>Digestive Track Enzymes</h3></div>
+          
+        </div>
+        <hr>
+        <p style="margin-top: 30px;text-align: center;">“I’m a Firefighter/EMT-A with the city of Newport News, Virginia. And the constant interrupted sleep every night at the fire station has taken its toll on my digestion-which is where Persona came in to help.”</p>
+        
+      </div>
+        
+        
+      <div class="test_1" style="">
+        <div class="tst_img">
+          <image src="stephen's-personalized-pack (1).webp" class="tst_img"></image>
+        </div>
+        <div style="text-align: center">
+          <h2>Stephen’s Personalised Pack</h2>
+          <h4>@scbryant7</h4>
+        </div>
+        <hr>
+        <div class="inner_test">
+          
+          <img src="digestive-enzymes.svg">
+          <div style="display: block;text-align: center;"><h3>Digestive Track Enzymes</h3></div>
+          
+        </div>
+        <hr>
+        <p style="margin-top: 30px;text-align: center;">“I’m a Firefighter/EMT-A with the city of Newport News, Virginia. And the constant interrupted sleep every night at the fire station has taken its toll on my digestion-which is where Persona came in to help.”</p>
+        
+      </div>
+      <div class="test_1" >
+        <div class="tst_img">
+          <image src="stephen's-personalized-pack (1).webp" class="tst_img"></image>
+        </div>
+        <div style="text-align: center;word-spacing: 2px;line-height: 20px;">
+          <h2>Stephen’s Personalised Pack</h2>
+          <h4>@scbryant7</h4>
+          <br>
+        </div>
+        
+        <hr>
+        <div class="inner_test">
+          
+          <img src="digestive-enzymes.svg">
+          <div style="display: block;text-align: center;"><h3>Digestive Track Enzymes</h3></div>
+          
+        </div>
+        <hr>
+        <p style="margin-top: 20px;text-align: center; line-height: 25px;margin-bottom: 20px;">“I’m a Firefighter/EMT-A with the city of Newport News, Virginia. And the constant interrupted sleep every night at the fire station has taken its toll on my digestion-which is where Persona came in to help.”</p>
+        
+      </div>
+    </div>
+    <footer class="foot">
+     <div class="foot_element_1">
+      <div class="foot_element">
+        <h3><a href="#" class="Header">ABOUT US</a></h4>
+        <ul>
+          <li><a href="#">Our Team</a></li>
+          <li><a href="#">International Shipping</a></li>
+          <li><a href="#">carrers</a></li>
+          <li><a href="#">Purchase A Gift Card</a></li>
+        </ul>
+      </div>
+      <div class="foot_element">
+        <h3><a href="#" class="Header">Explore</a></h5>
+        <ul>
+          <li><a href="#">Our Assesments</a></li>
+          <li><a href="#">Quality</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="foot_element">
+        <h3><a href="#" class="Header">margin-top: 30px;text-align: center;</a></h5>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">News And Articles</a></li>
+          <li><a href="#">Reviews</a></li>
+        </ul>
+      </div>
+      <div class="foot_element" id="programs" >
+        <h3><a href="#" class="Header">Programs</a></h5>
+        <ul>
+          <li><a href="#">prental</a></li>
+          <li><a href="#">prental</a></li>
+          <li><a href="#">prental</a></li>
+          <li><a href="#">prental</a></li>
+          <li><a href="#">prental</a></li>
+          <li><a href="#">prental</a></li>
+          <li><a href="#">prental</a></li>
+          
+        </ul>
+      </div>
+      
+      <div class="foot_element">
+        <h3><a href="#">Partner With Us</a></h5>
+        <ul>
+          <li><a href="#">Partner With Us</a></li>
+          <li><a href="#">Affiliates</a></li>
+          <li><a href="#">Referrals/a></li>
+
+        </ul>
+      </div>
+      <div class="foot_element">
+        <h3><a>Legal</a></h5>
+        <ul>
+          <li><a href="#">Privacy policy</a></li>
+          <li><a href="#">Privacy policy</a></li>
+          <li><a href="#">Privacy policy</a></li>
+          <li><a href="#">Privacy policy</a></li>
+        </ul>
+      </div>
+      <div class="foot_element">
+        <h3><a href="#">Connect</a></h5> 
+        <ul>
+          <li><imag src="icons8-linkedin.svg" width="20px" height="20px"></imag><a href="#">linkedin</a></li>
+          <li><imag src="icons8-linkedin.svg"></imag><a href="#">linkedin</a></li>
+          <li><imag src="icons8-linkedin.svg"></imag><a href="#">linkedin</a></li>
+          <li><imag src="icons8-linkedin.svg"></imag><a href="#">linkedin</a></li>
+
+        </ul>
+      </div>
+     </div>
+      <div class="foot_element_2">
+        <p style="border:1px solid black; margin:20px;text-align: center;">*These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. As with any dietary supplement, you should advise your healthcare practitioner of the use of this product.</p>
+        <p style="margin:20px;text-align: center;"> If you are using a screen reader and are having problems using this website, please call 1-800-983-3887 for assistance.</p>
+          
+        
+      </div>
+    </footer>
+  </body>
+</html>
